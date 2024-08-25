@@ -1,7 +1,0 @@
-google-generativeai
-streamlit
-pandas
-googlemaps
-tavily-python
-pdfkit
-pandas
