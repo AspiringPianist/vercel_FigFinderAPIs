@@ -28,8 +28,8 @@ st.markdown("""
 st.title('FigFinder AI')
 st.subheader('Plan your next group trip with AI')
 
-SUPABASE_URL = st.secrets["SUPABASE_URL"]
-SUPABASE_KEY = st.secrets["SUPABASE_KEY"]
+SUPABASE_URL = "https://oxekkilbifeicbrqvbue.supabase.co"
+SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im94ZWtraWxiaWZlaWNicnF2YnVlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQ2MDM1NDcsImV4cCI6MjA0MDE3OTU0N30.2_KMELwEcpWj2q6WWJh92qWMk0aREIysbOTBDM1iwlc"
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 # Initialize session state variables
@@ -46,8 +46,8 @@ if 'token' not in st.session_state:
 if 'suggested_dates' not in st.session_state:
     st.session_state.suggested_dates = []
 
-client_id = st.secrets["GOOGLE_CLIENT_ID"]
-client_secret = st.secrets["GOOGLE_CLIENT_SECRET"]
+client_id = "647775398332-gq8t0dkgs4u4pe18anbftm65dkojj9hl.apps.googleusercontent.com"
+client_secret = "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"
 redirect_uri = "http://localhost:8501/callback/"  # For local testing
 oauth2 = OAuth2Component(client_id, client_secret, redirect_uri,
                          authorize_endpoint="https://accounts.google.com/o/oauth2/v2/auth",
@@ -109,7 +109,7 @@ def get_personalized_travel_plan(user_preferences, trip_details, calendar_events
     if chat_history:
         message += f"\n\nAlso consider this chat history for additional context:\n{chat_history}"
     
-    genai.configure(api_key=st.secrets["GEMINI_API"])
+    genai.configure(api_key="AIzaSyC8QK1LuKtLdaCHM8cDj-Rttu1sNJ_J69s")
     model = genai.GenerativeModel('gemini-pro')
     
     response = model.generate_content(message)
