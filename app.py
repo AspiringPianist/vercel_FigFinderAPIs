@@ -22,15 +22,11 @@ st.set_page_config(page_title="FigFinder AI", layout="wide")
 st.markdown("""
 <style>
     body {
-        background-color: #e6f3ff;
+        background-color: #ffffff;
         color: #333333;
     }
     .stApp {
         background-color: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        animation: fadeIn 0.5s ease-in-out;
     }
     .stButton > button {
         background-color: #4da6ff;
@@ -41,30 +37,31 @@ st.markdown("""
     .stButton > button:hover {
         background-color: #3385cc;
         transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-    .stTextInput > div > div > input {
-        border-color: #4da6ff;
-    }
-    .stSelectbox > div > div > select {
+    .stTextInput > div > div > input,
+    .stSelectbox > div > div > select,
+    .stSlider > div > div > div > div {
         border-color: #4da6ff;
     }
     h1, h2, h3 {
-        color: #0066cc;
+        color: #4da6ff;
     }
-    .stPlotlyChart {
-        animation: slideIn 0.5s ease-in-out;
+    .stSidebar {
+        background-color: #f0f8ff;
     }
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
+    .stRadio > label {
+        color: #4da6ff;
     }
-    @keyframes slideIn {
-        from { transform: translateY(20px); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
+    .stCheckbox > label {
+        color: #4da6ff;
+    }
+    .stProgress > div > div > div > div {
+        background-color: #4da6ff;
     }
 </style>
 """, unsafe_allow_html=True)
+
 
 
 st.title('FigFinder AI')
