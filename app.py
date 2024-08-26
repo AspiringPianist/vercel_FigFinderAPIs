@@ -48,7 +48,7 @@ if 'suggested_dates' not in st.session_state:
 
 client_id = "647775398332-gq8t0dkgs4u4pe18anbftm65dkojj9hl.apps.googleusercontent.com"
 client_secret = "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"
-redirect_uri = "http://localhost:8501/callback/"  # For local testing
+redirect_uri = "https://figfinder.streamlit.app/callback/"  # For local testing
 oauth2 = OAuth2Component(client_id, client_secret, redirect_uri,
                          authorize_endpoint="https://accounts.google.com/o/oauth2/v2/auth",
                          token_endpoint="https://oauth2.googleapis.com/token")
