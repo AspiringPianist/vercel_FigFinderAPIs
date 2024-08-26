@@ -18,12 +18,12 @@ from supabase import create_client
 # Initialize Streamlit app
 st.set_page_config(page_title="FigFinder AI", layout="wide")
 
-# Custom CSS
 st.markdown("""
 <style>
     body {
-        background-color: #ffffff;
+        background-color: #f0f8ff;
         color: #333333;
+        font-family: 'Helvetica', 'Arial', sans-serif;
     }
     .stApp {
         background-color: #ffffff;
@@ -32,6 +32,8 @@ st.markdown("""
         background-color: #4da6ff;
         color: white;
         border-radius: 5px;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
         transition: all 0.3s ease;
     }
     .stButton > button:hover {
@@ -43,18 +45,20 @@ st.markdown("""
     .stSelectbox > div > div > select,
     .stSlider > div > div > div > div {
         border-color: #4da6ff;
+        border-radius: 5px;
     }
     h1, h2, h3 {
         color: #4da6ff;
     }
     .stSidebar {
         background-color: #f0f8ff;
+        padding: 1rem;
     }
-    .stRadio > label {
-        color: #4da6ff;
+    .stSidebar .stRadio > label {
+        color: #3385cc;
     }
-    .stCheckbox > label {
-        color: #4da6ff;
+    .stSidebar .stCheckbox > label {
+        color: #3385cc;
     }
     .stProgress > div > div > div > div {
         background-color: #4da6ff;
