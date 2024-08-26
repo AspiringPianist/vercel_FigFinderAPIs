@@ -18,12 +18,54 @@ from supabase import create_client
 # Initialize Streamlit app
 st.set_page_config(page_title="FigFinder AI", layout="wide")
 
-# Custom CSS (unchanged)
+# Custom CSS
 st.markdown("""
 <style>
-    /* Your custom CSS here */
+    body {
+        background-color: #e6f3ff;
+        color: #333333;
+    }
+    .stApp {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+    .stButton > button {
+        background-color: #4da6ff;
+        color: white;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+    .stButton > button:hover {
+        background-color: #3385cc;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .stTextInput > div > div > input {
+        border-color: #4da6ff;
+    }
+    .stSelectbox > div > div > select {
+        border-color: #4da6ff;
+    }
+    h1, h2, h3 {
+        color: #0066cc;
+    }
+    .stPlotlyChart {
+        animation: slideIn 0.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    @keyframes slideIn {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
 </style>
 """, unsafe_allow_html=True)
+
 
 st.title('FigFinder AI')
 st.subheader('Plan your next group trip with AI')
